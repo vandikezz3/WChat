@@ -1,0 +1,86 @@
+			.chat-box {
+    width: 600px;
+    height: 500px;
+    background-color: #efefef;
+    margin: 0 auto;
+    padding: 5px;
+   
+}
+
+.chat-msg {
+    height: 350px;
+    background-color: #fff;
+    overflow: auto;
+    overflow-y:auto;
+}
+
+.user-info {
+    height: 100px;
+    margin-top: 5px;
+    background-color: #fff;
+}
+
+.user-info>.txt {
+    display: block;
+    width: 590px;
+    height: 90px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #e4393c;
+    float: right;
+    color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+}
+
+.right,
+.left {
+    overflow: hidden;
+}
+
+.msg {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    border-radius: 15px;
+    word-wrap:break-word;
+}
+
+.right>.right-msg {
+    float: right;
+    margin-right: 10px;
+    background-color: #ddd;
+}
+
+.time{
+	float: left;
+	margin: 0;
+	padding-bottom: 10;
+	/*background-color: red;*/
+	height: 30px;
+	font-size: 10px;
+	text-align: center;
+}
+.usename{
+	float: left;
+	/*margin: 0;*/
+	padding-left: 20px;
+	padding-bottom: 10;
+	/*background-color: red;*/
+	height: 30px;
+	font-size: 10px;
+	text-align: center;
+}
+.audio{
+    display: none;
+}

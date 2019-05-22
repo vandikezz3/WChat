@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>denglu</title>
+	<link rel="stylesheet" type="text/css" href="css/denglu.css">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+</head>
+<body>
+	<!-- 大盒子 -->
+	<div class="container">
+	<!-- 背景图 -->
+		<div class="box"></div>
+		
+		 <!-- 导航栏 -->
+		<div class="topBar">
+			<div class="guanggao">
+				<div>apxe</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="login">	
+				<div class="user-login">用户登录</div>
+				<div class="form-login">
+					<input class="ipt" type="text" name="" id="inp" placeholder="输入用户名" >
+				</div>
+				<div class="form-login">
+					<input class="ipt" type="password" name="" id="psw" placeholder="输入密码" >
+				</div>
+				<a href="client.html">
+				<div class="botton" id="btn">
+					
+				登&nbsp;&nbsp;陆
+				
+				</div>
+				</a>
+				<div class="link">
+					<div class="link-l"><a href="longin.html" >立即注册</a></div>
+					<div class="link-w">忘记密码？</div>
+				</div>
+			</div> 
+			</div>
+				 <!-- 商务合作-->
+			<div class="towwm_box" id="towwm">
+				<div class="close" id="close">
+					X
+				</div>
+				<img src="images/twowm.jpg"/>
+			    <p>商务合作</p>
+			</div>
+		</div>
+	
+</body>
+
+	
+</script>
+<script type="text/javascript">
+	var isbtn = false
+	var myUSE =localStorage.getItem("USE");
+	  var myuse =  JSON.parse(myUSE);
+	  var inp = document.getElementById("inp")
+	  //myuse[i].xxxx
+//       for(var i =0;myuse.lenght){}
+//移除合作
+    document.getElementById("close").onclick = function(){
+    	var towwmbox = document.getElementById("towwm")
+    	towwmbox.parentNode.removeChild(towwmbox)
+    }
+	document.getElementById("btn").onclick = function(){
+		var inp = document.getElementById("inp")
+		 var psw = document.getElementById("psw")
+		 var useName = inp.value
+	     var usePassword = psw.value
+		
+		
+		for (var i  = 0; i < myuse.length; i++) {
+		if(myuse[i].user == useName && myuse[i].password == usePassword){
+			isbtn = true
+		}
+	}
+		if(isbtn == false){
+			event.preventDefault()
+			alert("你的用户名或者密码不正确")
+		}
+	}
+
+
+//	for (var i  = 0; i < myuse.length; i++) {
+//		if(myuse[i].user == useName &&myuse[i].password == usePassword){
+//			isbtn = true
+//		}
+//		 
+//	}
+</script>
+</html>
